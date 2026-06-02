@@ -1,14 +1,15 @@
 <html>
     <head>
 
-        <title>My Blogs. - Post</title>
+        <title>My Blogs - Delete</title>
         <link rel="stylesheet" href="{{ url_for('static', filename= 'css/post.css') }}">
+        <link rel="icon" href="{{ url_for('static', filename= 'assets/favicon.png') }}">
 
     </head>
 
     <body>
         
-        <h1>{{blogpost.title}}</h1>
+        <h1 id="del">Delete Post : {{blogpost.title}}</h1>
 
         <a href="/delete/{{blogpost.id}}">
             <button>Delete ❌</button>

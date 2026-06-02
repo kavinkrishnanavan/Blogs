@@ -70,13 +70,15 @@ def addpost():
 
         post_content = request.form.get("content")
 
-        newpost = Blog(title = post_title , image = "https://www.imu.edu.my/media/2016/06/yoga-pic.jpg" , content = post_content)
+        post_image = request.form.get("image")
+
+        newpost = Blog(title = post_title , image = post_image , content = post_content)
 
         db.session.add(newpost)
 
         db.session.commit()
 
-        return redirect(url_for("addpost"))
+        return redirect(url_for("index"))
     
     return render_template("addpost.html")
 

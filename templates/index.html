@@ -1,8 +1,10 @@
 <html>
     <head>
-        <title>My Blogs.</title>
+        <title>My Blogs</title>
 
         <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}">
+        
+        <link rel="icon" href="{{ url_for('static', filename= 'assets/favicon.png') }}">
     </head>
     <body>
         <header>
@@ -14,7 +16,7 @@
 
                     <li><a href="#">Home</a></li>
 
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#blogs">Blog</a></li>
 
                     <li><a href="{{url_for('addpost') }}">Add Post</a></li>
 
@@ -38,7 +40,7 @@
 
         </section>
 
-        <section class="blog-section">
+        <section class="blog-section" id="blogs">
 
             <div class="card-list">
 
@@ -49,6 +51,9 @@
                     <img src="{{post.image}}">
 
                     <h3>{{post.title}}</h3>
+
+
+                    <p style="text-decoration: none; color: orangered;">{{ post.content }}</p>
 
                     <div class="arrow">
 
