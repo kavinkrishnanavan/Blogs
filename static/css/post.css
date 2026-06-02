@@ -1,0 +1,18 @@
+body {
+
+    background-color: rgba(255, 166, 0, 0.164);
+
+    text-align: center;
+
+}
+
+button {
+
+    border: none;
+
+    border-radius: 14px;
+
+    background-color: orange;
+
+}
+

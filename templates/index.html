@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>My Blogs.</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav class="nav-bar">
+
+                <a href="#" class="logo">My Blogs<span>.</span></a>
+
+                <ul class="menu-links">
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#">Blog</a></li>
+
+                    <li><a href="{{url_for('addpost') }}">Add Post</a></li>
+
+                    <li><a href="#">Contact</a></li>
+                
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero-section">
+
+            <div class="content">
+
+                <h2>Your Source for Inspiration and Insight</h2>
+
+                <p>Welcome to My Blogs, where inspiration meets insight! We believe in the power of words to ignite passion, spark creativity, and foster growth. Whether you're a seasoned reader or a newcomer to the world of blogging, you've found your home here.</p>
+
+                <button>Explore</button>
+
+            </div>
+
+        </section>
+
+        <section class="blog-section">
+
+            <div class="card-list">
+
+                {% for post in blogpost %}
+
+                <a href="/{{post.id}}" class="card-item">
+
+                    <img src="{{post.image}}">
+
+                    <h3>{{post.title}}</h3>
+
+                    <div class="arrow">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </div>
+
+                </a>
+
+                {% endfor %}
+
+
+
+            </div>
+
+        </section>
+
+        <script src="https://kit.fontawesome.com/2e6f714ae6.js" crossorigin="anonymous"></script>
+
+    </body>
+</html>

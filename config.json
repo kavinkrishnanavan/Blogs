@@ -1,0 +1,19 @@
+{
+    "parameters" : {
+
+        "secret_key" : "83we23djd34edh2443ehddb",
+
+        "local_server" : false,
+
+        "local_uri" : "mysql+pymysql://root@127.0.0.1/Blogs",
+
+        "prod_uri" : "postgresql://blogpost_qesa_user:XUGv8WCjIG2zEZ44u89LJebqCySdbJpt@dpg-d8c2fi99rddc73f6l180-a.virginia-postgres.render.com/blogpost_qesa",
+
+        "title" : "The Wondering Compass",
+
+        "username" : "abc",
+
+        "password" : "12345"
+
+    }
+}
